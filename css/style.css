@@ -1,0 +1,14 @@
+body, html {
+    font-family: 'Noto Sans TC', sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale;
+	color: #777;
+	font-weight: 300;
+}
+a {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+}
