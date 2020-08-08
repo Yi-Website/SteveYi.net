@@ -3,20 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <title>STEVEYI.NET</title>
+    <title>網站開發中... 正在重定向 Redirecting…</title>
     <link rel="canonical" href="https://blog.steveyi.net/">
-    <link rel="shortcut icon" href="https://static.yiy.tw/media/logo/Yi_logo.png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <style>
         body,
         html {
-            font-family: 'Noto Sans TC', sans-serif;
+            font-family: "Noto Sans TC", "Arial";
         }
     </style>
 </head>
 
 <body>
-    即將來臨！
+    <table style="width:auto;margin:auto;">
+        <tbody>
+            <tr>
+                <td>
+                    <h1>網站開發中...</h1>
+                    <h1><a id="time"></a></h1>
+                    <script type="text/javascript">
+                        var t = 5; //設定倒數秒數
+
+                        //顯示倒數秒收
+                        function showTime() {
+                            t -= 1;
+                            document.getElementById("time").innerHTML = '重定向 Redirecting… ' + t + 's';
+
+                            if (t == 0) {
+                                location.href = "https://blog.steveyi.net/";
+                                document.getElementById("time").innerHTML = '<a href="https://blog.steveyi.net/">如果你沒有重定向，點擊這裡。 Click here if you are not redirected.</a>';
+                                return false;
+                            }
+
+                            setTimeout("showTime()", 1000); //每秒執行一次 showTime()
+                        }
+
+                        showTime(); //執行showTime()
+                    </script>
+                    <p>Copyright © 2019-
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>2020 <a href="/">SteveYi</a> 版權所有
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
