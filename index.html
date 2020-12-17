@@ -1,65 +1,99 @@
+<!--
+    勝勝好可愛
+    但小易更可愛 <- 並沒有/ 小易: ???
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>SteveYi</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
+    <!-- 始春延期 UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <!-- Icon -->
     <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
-    <style>
-        body,
-        html {
-            font-family: 'Noto Sans TC', 'Recursive', 'Arial', 'sans-serif';
-            background-color: #f3f3f3;
-        }
+    <!-- Vue 寶寶 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- 驚喜喔 -->
+    <script src="./js/konami.js"></script>
+    <script>
+        var easter_egg = new Konami(function() {
+            d = document;
+            s = d.createElement('script');
+            s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
+            b = d.getElementsByTagName('body')[0];
+            b.appendChild(s);
 
-        .center {
-            margin: auto;
-            width: 50%;
-            padding: 10px;
+            var audio = new Audio('./audio/juntos-607.ogg');
+            audio.play();
+        });
+    </script>
+    <style>
+        #app {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        #container {
+            padding-top: 16px;
+            flex: 1;
+            width: 700px;
+        }
+        
+        #footer {
             text-align: center;
+            padding: 16px 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="center">
-        <h1>Hey SteveYi is HERE!</h1>
-        <ul>
-            <li>SteveYi is a student from Taiwan, who is very interested in network engineering.</li>
-        </ul>
-        <!-- <h2>Project</h2> -->
-        <h2>SteveYi Network Service</h2>
-        <ul>
-            <li>A Network Service by SteveYi, using AS209557 with another ASN making peering</li>
-            <li><a target="_blank" href="https://network.steveyi.net/"><i class="fas fa-network-wired"></i> Network
-                    Policy</a></li>
-            <li><a target="_blank" href="https://bgp.nat.moe/#AS209557"><i class="fas fa-network-wired"></i> AS209557
-                    Network Graph</a></li>
-            <li><a target="_blank" href="https://bgp.he.net/AS209557"><i class="fas fa-network-wired"></i> HE BGP
-                    Toolkit</a></li>
-        </ul>
-        <h2>Contact Me</h2>
-        <ul>
-            <li><a target="_blank" href="mailto:jackcooku@steveyi.net"><i class="fa fa-envelope"></i> Email</a></li>
-            <li><a target="_blank" href="https://github.com/steveyiyo"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a target="_blank" href="https://twitter.com/steveyiyo"><i class="fab fa-twitter"></i> Twitter</a></li>
-        </ul>
-        <br>
-        Copyright © 2019 -
-        <script type="text/javascript">
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="https://steveyi.net/">SteveYi</a>, All rights reserved.
-        <br>
-        <div class="center">
-            English | <a href="zh_TW">中文</a>
+    <div id="app">
+        <div class="ts padded horizontally fitted fluid slate">
+            <div class="ts very narrow container">
+                <h1 class="ts header">Hey SteveYi is HERE!
+                    <div class="sub header ">SteveYi is a student from Taiwan, who is interested in network engineering.</div>
+                </h1>
+            </div>
+        </div>
+        <div class="ts very narrow container" id="container">
+            <h2 class="ts header">About Me</h2>
+            <p>Southern Taiwan University of Science and Technology - The sec grade of five-year junior college</p>
+            <h2 class="ts header">SteveYi Network Service</h2>
+            <p>A Network Service by SteveYi, using AS209557 with another ASN making peering</p>
+            <div class="ts selection segmented list">
+                <a href="https://network.steveyi.net/" class="item"> <i class="server icon"></i> Network Policy </a>
+                <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 Network Graph </a>
+                <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
+            </div>
+            <h2 class="ts header">Contact Me</h2>
+            <div class="ts separated buttons">
+                <a class="ts button" href="mailto:jackcooku@steveyi.net"> <i class="mail icon"></i>Email</a>
+                <a class="ts inverted button" href="https://github.com/steveyiyo"> <i class="github icon"></i>GitHub</a>
+                <a class="ts primary button" href="https://twitter.com/steveyiyo"> <i class="twitter icon"></i>Twitter</a>
+            </div>
+        </div>
+        <div class="ts fitted fluid slate" id="footer">
+            <div class="ts very narrow container">
+                Copyright © 2019 - {{year}}
+                <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
+                <br/>
+                <div>
+                    English | <a href="zh_TW">中文</a>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                year: new Date().getFullYear(),
+                leko: 'stubu'
+            },
+        })
+    </script>
 </body>
 
 </html>
