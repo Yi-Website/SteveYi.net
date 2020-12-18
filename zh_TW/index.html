@@ -1,64 +1,100 @@
+<!--
+    勝勝好可愛
+    但小易更可愛 <- 並沒有/ 小易: ???
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>小易</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css" rel="stylesheet">
+    <!-- 始春延期 UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <!-- Icon -->
     <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    <!-- Vue 寶寶 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- 驚喜喔 -->
+    <script src="../js/konami.js"></script>
+    <script>
+        var easter_egg = new Konami(function() {
+            d = document;
+            s = d.createElement('script');
+            s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
+            b = d.getElementsByTagName('body')[0];
+            b.appendChild(s);
+
+            var audio = new Audio('./audio/juntos-607.ogg');
+            audio.play();
+        });
+    </script>
     <style>
-        body,
-        html {
-            font-family: 'Noto Sans TC', 'Recursive', 'Arial', 'sans-serif';
-            background-color: #f3f3f3;
+        #app {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
-        .center {
-            margin: auto;
-            width: 50%;
-            padding: 10px;
+        #container {
+            padding-top: 16px;
+            flex: 1;
+            width: 700px;
+        }
+        
+        #footer {
             text-align: center;
+            padding: 16px 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="center">
-        <h1>嗨 小易在這裡</h1>
-        <ul>
-            <li>小易是一個奇怪的學生，非常熱愛網路工程。有時候會戳戳有趣的東西</li>
+    <div id="app">
+        <div class="ts padded horizontally fitted fluid slate">
+            <div class="ts very narrow container">
+                <h1 class="ts header">>嗨 小易在這裡
+                    <div class="sub header ">小易是一個奇怪的學生，非常熱愛網路工程。有時候會戳戳有趣的東西</div>
+                </h1>
+            </div>
+        </div>
         </ul>
-        <!-- <h2>專案</h2> -->
-        <h2>小易的網路服務</h2>
-        <ul>
-            <li>由 小易(SteveYi) 維護的網路服務，透過 AS209557 與其他自治號碼建立對等連接</li>
-            <li><a target="_blank" href="https://network.steveyi.net/"><i class="fas fa-network-wired"></i> 網路政策</a>
-            </li>
-            <li><a target="_blank" href="https://bgp.nat.moe/#AS209557"><i class="fas fa-network-wired"></i> AS209557
-                    網路拓鋪圖</a></li>
-            <li><a target="_blank" href="https://bgp.he.net/AS209557"><i class="fas fa-network-wired"></i> HE BGP
-                    Toolkit</a></li>
-        </ul>
-        <h2>與我聯繫</h2>
-        <ul>
-            <li><a target="_blank" href="mailto:jackcooku@steveyi.net"><i class="fa fa-envelope"></i> 電子郵箱</a></li>
-            <li><a target="_blank" href="https://github.com/steveyiyo"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a target="_blank" href="https://twitter.com/steveyiyo"><i class="fab fa-twitter"></i> Twitter</a></li>
-        </ul>
-        <br> Copyright © 2019 -
-        <script type="text/javascript">
-            document.write(new Date().getFullYear());
-        </script>
-        <a href="https://steveyi.net/">小易</a>, All rights reserved.
-        <br>
-        <div class="center">
-            <a href="/">English</a> | 中文
+        <div class="ts very narrow container" id="container">
+            <h2 class="ts header">關於小易</h2>
+            <p>南台科技大學 - 五專二年級</p>
+            <h2 class="ts header">小易網路服務</h2>
+            <p>由 小易(SteveYi) 維護的網路服務，透過 AS209557 與其他自治號碼建立對等連接</p>
+            <div class="ts selection segmented list">
+                <a href="https://network.steveyi.net/" class="item"> <i class="server icon"></i> 網路政策</a>
+                <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 網路拓鋪圖</a>
+                <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
+            </div>
+            <h2 class="ts header">Contact Me</h2>
+            <div class="ts separated buttons">
+                <a class="ts button" href="mailto:jackcooku@steveyi.net"> <i class="mail icon"></i>電子郵箱</a>
+                <a class="ts inverted button" href="https://github.com/steveyiyo"> <i class="github icon"></i>GitHub</a>
+                <a class="ts primary button" href="https://twitter.com/steveyiyo"> <i class="twitter icon"></i>Twitter</a>
+            </div>
+        </div>
+        <div class="ts fitted fluid slate" id="footer">
+            <div class="ts very narrow container">
+                Copyright © 2019 - {{year}}
+                <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
+                <br/>
+                <div>
+                    <a href="../">English</a> | 中文
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                year: new Date().getFullYear(),
+                leko: 'stubu'
+            },
+        })
+    </script>
 </body>
 
 </html>
