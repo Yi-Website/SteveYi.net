@@ -18,7 +18,7 @@
     <!-- 驚喜喔 -->
     <script src="./js/konami.js"></script>
     <script>
-        var easter_egg = new Konami(function() {
+        var easter_egg = new Konami(function () {
             d = document;
             s = d.createElement('script');
             s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
@@ -30,18 +30,23 @@
         });
     </script>
     <style>
+        body,
+        html {
+            font-weight: bold;
+        }
+
         #app {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-        
+
         #container {
             padding-top: 16px;
             flex: 1;
             width: 700px;
         }
-        
+
         #footer {
             text-align: center;
             padding: 16px 0;
@@ -55,32 +60,40 @@
         <div class="ts padded horizontally fitted fluid slate">
             <div class="ts very narrow container">
                 <h1 class="ts header">Hey SteveYi is HERE!
-                    <div class="sub header ">SteveYi is a student from Taiwan, who is interested in network engineering.</div>
+                    <div class="sub header ">SteveYi is a student from Taiwan, who is interested in network engineering.
+                    </div>
                 </h1>
             </div>
         </div>
         <div class="ts very narrow container" id="container">
             <h2 class="ts header">About Me</h2>
-            <p>Southern Taiwan University of Science and Technology - 2nd grade in school</p>
+            <p>Southern Taiwan University of Science and Technology - 2nd grade of five-year junior in school</p>
             <h2 class="ts header">SteveYi Network Service</h2>
             <p>A Network Service by SteveYi, using AS209557 with another ASN making peering</p>
             <div class="ts selection segmented list">
                 <a href="https://network.steveyi.net/" class="item"> <i class="server icon"></i> Network Policy </a>
-                <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 Network Graph </a>
+                <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 Network Graph
+                </a>
                 <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
+            </div>
+            <h2 class="ts header">Website</h2>
+            <p>Cool</p>
+            <div class="ts selection segmented list">
+                <a href="https://birthday.steveyi.net/" class="item"> 嘿！小易 18 歲了</a>
             </div>
             <h2 class="ts header">Contact Me</h2>
             <div class="ts separated buttons">
                 <a class="ts button" href="mailto:jackcooku@steveyi.net"> <i class="mail icon"></i>Email</a>
                 <a class="ts inverted button" href="https://github.com/steveyiyo"> <i class="github icon"></i>GitHub</a>
                 <a class="ts primary button" href="https://twitter.com/steveyiyo"> <i class="twitter icon"></i>Twitter</a>
+                <a class="ts primary button" href="https://t.me/steveyiyo"> <i class="telegram icon"></i>Telegram</a>
             </div>
         </div>
         <div class="ts fitted fluid slate" id="footer">
             <div class="ts very narrow container">
                 Copyright © 2019 - {{year}}
                 <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
-                <br/>
+                <br />
                 <div>
                     English | <a href="zh_TW">中文</a>
                 </div>

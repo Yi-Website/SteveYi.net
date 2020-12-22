@@ -15,10 +15,13 @@
     <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
     <!-- Vue 寶寶 -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
     <!-- 驚喜喔 -->
     <script src="../js/konami.js"></script>
     <script>
-        var easter_egg = new Konami(function() {
+        var easter_egg = new Konami(function () {
             d = document;
             s = d.createElement('script');
             s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
@@ -30,18 +33,23 @@
         });
     </script>
     <style>
+        body,
+        html {
+            font-weight:bold;
+        }
+
         #app {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-        
+
         #container {
             padding-top: 16px;
             flex: 1;
             width: 700px;
         }
-        
+
         #footer {
             text-align: center;
             padding: 16px 0;
@@ -63,24 +71,30 @@
             <h2 class="ts header">關於小易</h2>
             <p>南台科技大學 - 五專二年級</p>
             <h2 class="ts header">小易網路服務</h2>
-            <p>由 小易(SteveYi) 維護的網路服務，透過 AS209557 與其他自治號碼建立對等連接</p>
+            <p>由 小易 維護的網路服務，透過 AS209557 與其他自治號碼建立對等連接</p>
             <div class="ts selection segmented list">
                 <a href="https://network.steveyi.net/" class="item"> <i class="server icon"></i> 網路政策</a>
                 <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 網路拓鋪圖</a>
                 <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
+            </div>
+            <h2 class="ts header">一些神奇的酷網站</h2>
+            <p>腦動大開 耶嘿</p>
+            <div class="ts selection segmented list">
+                <a href="https://birthday.steveyi.net/" class="item"> 嘿！小易 18 歲了</a>
             </div>
             <h2 class="ts header">聯繫小易</h2>
             <div class="ts separated buttons">
                 <a class="ts button" href="mailto:jackcooku@steveyi.net"> <i class="mail icon"></i>電子郵箱</a>
                 <a class="ts inverted button" href="https://github.com/steveyiyo"> <i class="github icon"></i>GitHub</a>
                 <a class="ts primary button" href="https://twitter.com/steveyiyo"> <i class="twitter icon"></i>Twitter</a>
+                <a class="ts primary button" href="https://t.me/steveyiyo"> <i class="telegram icon"></i>Telegram</a>
             </div>
         </div>
         <div class="ts fitted fluid slate" id="footer">
             <div class="ts very narrow container">
                 Copyright © 2019 - {{year}}
                 <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
-                <br/>
+                <br />
                 <div>
                     <a href="../">English</a> | 中文
                 </div>
