@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://network.steveyi.net/logo.png">
+    <script src='https://www.recaptcha.net/recaptcha/api.js' async defer></script>
+    <title>SteveYi Short Link</title>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+        body,
+        html {
+            font-family: 'Recursive', sans-serif;
+            background-color: #ffffff;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        tr {
+            text-align: left;
+            padding: 4px;
+        }
+        
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>酷小易ㄉ短連結</h1>
+        <div class="container">
+            <form action="https://yiy.tw/api/create/" method="post">
+                <input class="text" type="text" name="link" placeholder='輸入你想要短連結的連結...'>
+                <input class="btn" type="submit" value="建立!">
+                <div class='captcha_wrapper'>
+                    <br>
+                    <div class='g-recaptcha' data-sitekey=6LdkGd8UAAAAAM2gOhnVwf64D2arRTf0OXI6tNSy>
+                    </div>
+                </div>
+            </form>
+            <script type="application/javascript">
+                function getip(json) {
+                    document.write("<br>系統會記錄您目前的 IP 位置: ", json.ip);
+                }
+            </script>
+            <script type="application/javascript" src="https://api.ip.sb/jsonip?callback=getip"></script>
+        </div>
+        <br>
+        <br> 由 <a href="https://network.steveyi.net/">SteveYi Network Service</a> 強力驅動(?)
+        <br> Design by <a href="https://steveyi.net/">酷小易</a> @
+        <script>
+            document.write(new Date().getFullYear());
+        </script>
+    </div>
+</body>
+
+</html>
