@@ -1,7 +1,3 @@
-<!--
-    勝勝好可愛
-    但小易更可愛 <- 並沒有/ 小易: ???
--->
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +17,7 @@
     <!-- 驚喜喔 -->
     <script src="../js/konami.js"></script>
     <script>
-        var easter_egg = new Konami(function () {
+        var easter_egg = new Konami(function() {
             d = document;
             s = d.createElement('script');
             s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
@@ -35,24 +31,29 @@
     <style>
         body,
         html {
-            font-weight:bold;
+            font-weight: bold;
         }
-
+        
         #app {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
+        
         #container {
             padding-top: 16px;
             flex: 1;
             width: 700px;
         }
-
+        
         #footer {
             text-align: center;
             padding: 16px 0;
+            margin-top: 16px;
+        }
+        
+        .ts.web.embed img {
+            height: auto;
         }
     </style>
 </head>
@@ -78,9 +79,78 @@
                 <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
             </div>
             <h2 class="ts header">一些神奇的酷網站</h2>
-            <p>腦動大開 耶嘿</p>
-            <div class="ts selection segmented list">
-                <a href="https://birthday.steveyi.net/" class="item"> 嘿！小易 18 歲了</a>
+            <p>這邊有一些酷東西耶！</p>
+            <div class="ts stackable three cards">
+                <a class="ts card" href="https://steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/steveyi.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            SteveYi
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://blog.steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/blog.steveyi.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            酷小易部落格
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://birthday.steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/media/logo/birthday_by_iamnjlu.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            嘿！小易 18 歲了
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://lg.steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/lg.steveyi.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            Looking Glass
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://whois.steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/whois.steveyi.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            查詢 Whois
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://steveyi.net/ShortLink/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/ShortLink.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            短連結
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://network.steveyi.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/network.steveyi.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            Network Service
+                        </div>
+                    </div>
+                </a>
             </div>
             <h2 class="ts header">聯繫小易</h2>
             <div class="ts separated buttons">
@@ -92,7 +162,7 @@
         <div class="ts fitted fluid slate" id="footer">
             <div class="ts very narrow container">
                 Copyright © 2019 - {{year}}
-                <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
+                <a href="https://steveyi.net/">小易</a> All rights reserved.
                 <br />
                 <div>
                     <a href="../">English</a> | 中文
@@ -109,6 +179,7 @@
             },
         })
     </script>
+
 </body>
 
 </html>
