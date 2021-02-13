@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Friends - SteveYi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+    <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <style>
+        body,
+        html {
+            font-weight: bold;
+        }
+        
+        #app {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        #container {
+            padding-top: 16px;
+            flex: 1;
+            width: 700px;
+        }
+        
+        #footer {
+            text-align: center;
+            padding: 16px 0;
+            margin-top: 16px;
+        }
+        
+        .ts.web.embed img {
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="ts padded horizontally fitted fluid slate">
+            <div class="ts very narrow container">
+                <h1 class="ts header">Wow! It's SteveYi Friends!
+                    <div class="sub header ">Here is SteveYi's friends website.</div>
+                </h1>
+            </div>
+        </div>
+        <div class="ts very narrow container" id="container">
+            <div class="ts stackable three cards">
+                <a class="ts card" href="https://swineson.me//">
+                    <div class="ts web embed">
+                        <img src="https://swineson.me/assets-nonfree/images/background.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            James Swineson
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://who.nat.moe/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/who.nat.moe.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            奈特
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://gnehs.net/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/gnehs.net.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            勝勝
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="http://leko.moe/">
+                    <div class="ts web embed">
+                        <img src="https://static.yiy.tw/static/img/og/leko.moe.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            Leko owo//
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://www.edisonlee55.com/">
+                    <div class="ts web embed">
+                        <img src="https://cdn.edisonlee55.com/resources/images/ogimage.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            李明謙 Edison Lee
+                        </div>
+                    </div>
+                </a>
+                <a class="ts card" href="https://www.sean.taipei/">
+                    <div class="ts web embed">
+                        <img src="https://img.sean.taipei/sean/avatar.png">
+                    </div>
+                    <div class="content">
+                        <div class="header">
+                            Sean
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <h2 class="ts header">Contact Me</h2>
+            <div class="ts separated buttons">
+                If you want to change friends link with me, please send email to jackcooku_at_steveyi_dot_net
+            </div>
+        </div>
+        <div class="ts fitted fluid slate" id="footer">
+            <div class="ts very narrow container">
+                Copyright © 2019 - {{year}}
+                <a href="https://steveyi.net/">SteveYi</a> All rights reserved.
+                <br />
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                year: new Date().getFullYear(),
+                leko: 'stubu'
+            },
+        })
+    </script>
+</body>
+
+</html>
