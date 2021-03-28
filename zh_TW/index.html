@@ -1,184 +1,233 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title>小易</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- 始春延期 UI -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
-    <!-- Icon -->
-    <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
-    <!-- Vue 寶寶 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
-    <!-- 驚喜喔 -->
-    <script src="../js/konami.js"></script>
-    <script>
-        var easter_egg = new Konami(function() {
-            d = document;
-            s = d.createElement('script');
-            s.src = 'https://gnehs.github.io/Sealed/negi/negi.js';
-            b = d.getElementsByTagName('body')[0];
-            b.appendChild(s);
+    <head>
+        <meta charset="utf-8">
+        <title>小易</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- 始春延期 UI -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css">
+        <!-- Icon -->
+        <link rel="icon" href="https://static.yiy.tw/static/img/apple-touch-icon-114x114.png">
+        <!-- Vue 寶寶 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700&display=swap" rel="stylesheet">
+        <style>
+            body,
+            html {
+                font-weight: bold;
+            }
 
-            var audio = new Audio('../audio/juntos-607.ogg');
-            audio.play();
-        });
-    </script>
-    <style>
-        body,
-        html {
-            font-weight: bold;
-        }
-        
-        #app {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        #container {
-            padding-top: 16px;
-            flex: 1;
-            width: 700px;
-        }
-        
-        #footer {
-            text-align: center;
-            padding: 16px 0;
-            margin-top: 16px;
-        }
-        
-        .ts.web.embed img {
-            height: auto;
-        }
-    </style>
-</head>
+            #app {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
 
-<body>
-    <div id="app">
-        <div class="ts padded horizontally fitted fluid slate">
-            <div class="ts very narrow container">
-                <h1 class="ts header">嗨 小易在這裡
+            #container {
+                padding-top: 16px;
+                flex: 1;
+                width: 700px;
+            }
+
+            #footer {
+                text-align: center;
+                padding: 16px 0;
+                margin-top: 16px;
+            }
+
+            .ts.web.embed img {
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="ts padded horizontally fitted fluid slate">
+                <div class="ts very narrow container">
+                    <h1 class="ts header">嗨 小易在這裡
                     <div class="sub header ">小易是一個奇怪的學生，非常熱愛網路工程。有時候會戳戳有趣的東西</div>
-                </h1>
-            </div>
-        </div>
-        </ul>
-        <div class="ts very narrow container" id="container">
-            <h2 class="ts header">關於小易</h2>
-            <p>南台科技大學 - 五專二年級</p>
-            <h2 class="ts header">小易網路服務</h2>
-            <p>由 小易 維護的網路服務，透過 AS209557 與其他自治號碼建立對等連接</p>
-            <div class="ts selection segmented list">
-                <a href="https://network.steveyi.net/" class="item"> <i class="server icon"></i> 網路政策</a>
-                <a href="https://bgp.nat.moe/#AS209557" class="item"> <i class="server icon"></i> AS209557 網路拓鋪圖</a>
-                <a href="https://bgp.he.net/AS209557" class="item"> <i class="server icon"></i> HE BGP Toolkit</a>
-            </div>
-            <h2 class="ts header">一些神奇的酷網站</h2>
-            <p>這邊有一些酷東西耶！</p>
-            <div class="ts stackable three cards">
-                <a class="ts card" href="https://steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/steveyi.net.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            SteveYi
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://blog.steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/blog.steveyi.net.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            酷小易部落格
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://birthday.steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/media/logo/birthday_by_iamnjlu.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            嘿！小易 18 歲了
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://lg.steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/lg.steveyi.net.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Looking Glass
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://whois.steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/whois.steveyi.net.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            查詢 Whois
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://steveyi.net/ShortLink/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/ShortLink.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            短連結
-                        </div>
-                    </div>
-                </a>
-                <a class="ts card" href="https://network.steveyi.net/">
-                    <div class="ts web embed">
-                        <img src="https://static.yiy.tw/static/img/og/network.steveyi.net.png">
-                    </div>
-                    <div class="content">
-                        <div class="header">
-                            Network Service
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <h2 class="ts header">聯繫小易</h2>
-            <div class="ts separated buttons">
-                <a class="ts button" href="mailto:jackcooku@steveyi.net"> <i class="mail icon"></i>電子郵箱</a>
-                <a class="ts inverted button" href="https://github.com/steveyiyo"> <i class="github icon"></i>GitHub</a>
-                <a class="ts primary button" href="https://twitter.com/steveyiyo"> <i class="twitter icon"></i>Twitter</a>
-            </div>
-        </div>
-        <div class="ts fitted fluid slate" id="footer">
-            <div class="ts very narrow container">
-                Copyright © 2019 - {{year}}
-                <a href="https://steveyi.net/">小易</a> All rights reserved.
-                <br />
-                <div>
-                    <a href="../">English</a> | 中文
+                    </h1>
                 </div>
             </div>
+    </ul>
+    <div class="ts very narrow container" id="container">
+        <h2 class="ts header">關於小易</h2>
+        <p>南台科技大學 - 五專二年級</p>
+        <h2 class="ts header">專案</h2>
+        <div class="ts stackable three cards">
+            <a class="ts card" href="https://github.com/steveyiyo/SteveYi-Network">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/network.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            SteveYi Network
+                        </div>
+                    <p>由小易提供的非營利網路服務，並維護 AS60614 及 AS209557。</p>
+                </div>
+            </a>
+            <a class="ts card" href="https://github.com/steveyiyo/frrouting-lg">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/lg.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            Looking Glass
+                        </div>
+                    <p>一個可以檢查網路問題的工具</p>
+                </div>
+            </a>
+            <a class="ts card" href="https://github.com/SteveYi-LAB/SteveYi-Whois">
+                <div class="ts embed">
+                    <img src="https://static.yiy.tw/static/img/og/whois.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            Whois Searching
+                        </div>
+                    <p>線上查詢 Whois 資料</p>
+                </div>
+            </a>
+            <a class="ts card" href="https://github.com/SteveYi-LAB/SteveYi-ShortLink">
+                <div class="ts embed">
+                    <img src="https://static.yiy.tw/static/img/og/ShortLink.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            ShortLink
+                        </div>
+                    <p>立刻縮短你的連結吧！由 Golang 所編寫</p>
+                </div>
+            </a>
+            <a class="ts card" href="https://github.com/steveyiyo/file_folder">
+                <div class="ts embed">
+                    <img src="https://static.yiy.tw/static/img/og/File_Folder.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            File Folder
+                        </div>
+                    <p>輕鬆地分享你的檔案</p>
+                </div>
+            </a>
+        </div>
+        <h2 class="ts header">一些神奇的酷網站</h2>
+        <div class="ts stackable three cards">
+            <a class="ts card" href="https://steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            SteveYi
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://blog.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/blog.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            酷小易部落格
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://birthday.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/media/logo/birthday_by_iamnjlu.jpg">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            嘿！小易 18 歲了
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://lg.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/lg.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            Looking Glass
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://whois.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/whois.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            查詢 Whois
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://steveyi.net/ShortLink/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/ShortLink.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            短連結
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://network.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/network.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            Network Service
+                        </div>
+                </div>
+            </a>
+            <a class="ts card" href="https://api.steveyi.net/">
+                <div class="ts web embed">
+                    <img src="https://static.yiy.tw/static/img/og/api.steveyi.net.png">
+                </div>
+                <div class="content">
+                    <div class="header">
+                            API Service
+                        </div>
+                </div>
+            </a>
+        </div>
+        <h2 class="ts header">聯繫小易</h2>
+        <div class="ts separated buttons">
+            <a class="ts button" href="mailto:jackcooku@steveyi.net">
+                <i class="mail icon"></i>電子郵箱</a>
+            <a class="ts inverted button" href="https://github.com/steveyiyo">
+                <i class="github icon"></i>GitHub</a>
+            <a class="ts primary button" href="https://twitter.com/steveyiyo">
+                <i class="twitter icon"></i>Twitter</a>
         </div>
     </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                year: new Date().getFullYear(),
-                leko: 'stubu'
-            },
-        })
-    </script>
+    <div class="ts fitted fluid slate" id="footer">
+        <div class="ts very narrow container">
+                Copyright © 2019 - {{year}}
+            <a href="https://steveyi.net/">小易</a> All rights reserved.
+                <br/>
+            <div>
+                <a href="../">English</a> | 中文
+                </div>
+        </div>
+    </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            year: new Date().getFullYear(),
+            leko: 'stubu'
+        }
+    })
+</script>
 
 </body>
 
